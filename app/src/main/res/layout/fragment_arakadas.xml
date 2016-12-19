@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ibrah.guild2.ArakadasFragment">
+    tools:context="com.example.ibrah.guild2.Fragmentler.ArakadasFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

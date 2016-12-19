@@ -11,6 +11,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.ibrah.guild2.CheckIn.Check_In;
+import com.example.ibrah.guild2.Fragmentler.AnaSayfa;
+import com.example.ibrah.guild2.Fragmentler.ArakadasFragment;
+import com.example.ibrah.guild2.Fragmentler.GuildFragment;
+import com.example.ibrah.guild2.Fragmentler.ProfilFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;

@@ -1,4 +1,4 @@
-package com.example.ibrah.guild2;
+package com.example.ibrah.guild2.Fragmentler;
 
 
 import android.content.Intent;
@@ -10,13 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ibrah.guild2.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class AnaSayfa extends Fragment {
 
-//deneme 1 son
+
     public AnaSayfa() {
         // Required empty public constructor
     }

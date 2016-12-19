@@ -1,4 +1,4 @@
-package com.example.ibrah.guild2;
+package com.example.ibrah.guild2.CheckIn;
 
 /**
  * Created by ibrah on 4.12.2016.

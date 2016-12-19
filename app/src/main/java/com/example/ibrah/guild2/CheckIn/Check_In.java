@@ -1,4 +1,4 @@
-package com.example.ibrah.guild2;
+package com.example.ibrah.guild2.CheckIn;
 
 import android.content.Context;
 import android.location.Criteria;
@@ -9,10 +9,11 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.ibrah.guild2.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

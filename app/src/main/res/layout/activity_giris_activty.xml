@@ -25,4 +25,16 @@
         android:onClick="KayıtOL"/>
 
 
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_login_bn"
+        android:gravity="center"
+        android:layout_below="@+id/kayıtol"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+    </com.facebook.login.widget.LoginButton>
+
+
 </RelativeLayout>
