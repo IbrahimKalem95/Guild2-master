@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ibrah.guild2.Kayit.LoginActivity;
 import com.example.ibrah.guild2.Kayit.SignUpActivity;
@@ -23,6 +24,7 @@ public class GirisActivity extends AppCompatActivity {
     LoginButton loginButton;
     TextView textView ;
     CallbackManager callbackManager;
+    Profile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +33,15 @@ public class GirisActivity extends AppCompatActivity {
         setContentView(R.layout.activity_giris_activty);
 
         loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
-
+        profile = Profile.getCurrentProfile();
         callbackManager = CallbackManager.Factory.create();
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
+
             @Override
             public void onSuccess(LoginResult loginResult) {
 
-                AccessToken accessToken = loginResult.getAccessToken();
-                Profile profile = Profile.getCurrentProfile();
+
                 Intent ıntent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(ıntent);
 
@@ -46,13 +49,14 @@ public class GirisActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
-                textView.setText("Login Cancelled");
+               Toast.makeText(getApplicationContext(),"Geri gelindi",Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onError(FacebookException error) {
             }
         });
+
 
     }
 

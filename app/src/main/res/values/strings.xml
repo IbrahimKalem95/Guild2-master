@@ -23,4 +23,9 @@
     <string name="kayit_ol">Kayıt OL</string>
     <string name="Isim">İsim</string>
     <string name="sifre_onayla">Şifre Onayla</string>
+
+    <string name="start_time">00:00:00</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+    <string name="title">Antreman Kronemetresi</string>
 </resources>
