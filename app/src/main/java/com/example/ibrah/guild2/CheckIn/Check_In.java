@@ -86,7 +86,7 @@ public class Check_In extends AppCompatActivity {
             }
         });
     }
-
+//deneme
     public URL URLOlustur(URL url) {
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();
