@@ -59,6 +59,9 @@ public class StartTraining extends AppCompatActivity {
             txtTimer.setTextColor(Color.BLUE);
             timeSwapBuff += timeInMilliseconds;
             handler.removeCallbacks(updateTimer);
+
+            mySnackbar = Snackbar.make(relativeLayout,"Antreman duraklatıldı",Snackbar.LENGTH_LONG);
+            mySnackbar.show();
             t = 1;
         }
     }
