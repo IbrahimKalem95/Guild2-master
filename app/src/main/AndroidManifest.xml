@@ -21,11 +21,19 @@
         <activity android:name=".CheckIn.Check_In" />
         <activity
             android:name=".Kayit.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".Kayit.SignUpActivity"
             android:label="@string/title_activity_sign_up" />
         <activity android:name=".GirisActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SplashScreen" android:label="DGS Sayaç" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +45,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".CheckIn.StartTraining"></activity>
+        <activity android:name=".CheckIn.StartTraining" />
     </application>
 
 </manifest>

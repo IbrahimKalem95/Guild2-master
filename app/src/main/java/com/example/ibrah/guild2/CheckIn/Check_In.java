@@ -64,7 +64,7 @@ public class Check_In extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 new AlertDialog.Builder(Check_In.this)
-                        .setTitle("Ceheck-In")
+                        .setTitle("Check-In")
                         .setMessage("Burada checkin yapmak istiyor musunuz ? ")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which)
@@ -86,7 +86,7 @@ public class Check_In extends AppCompatActivity {
             }
         });
     }
-//deneme
+
     public URL URLOlustur(URL url) {
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Criteria criteria = new Criteria();

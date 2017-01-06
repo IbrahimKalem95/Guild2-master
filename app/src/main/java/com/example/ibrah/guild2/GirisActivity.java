@@ -1,6 +1,8 @@
 package com.example.ibrah.guild2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInstaller;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,31 +22,34 @@ import com.facebook.login.widget.LoginButton;
 
 public class GirisActivity extends AppCompatActivity {
 
-
     LoginButton loginButton;
-    TextView textView ;
+    TextView txtresult ;
     CallbackManager callbackManager;
     Profile profile;
+    int flag = 0;
+    int result = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_giris_activty);
-
         loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
         profile = Profile.getCurrentProfile();
         callbackManager = CallbackManager.Factory.create();
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        SharedPreferences temp = getSharedPreferences("flag",0);
+        final SharedPreferences.Editor editor = temp.edit();
 
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 
             @Override
             public void onSuccess(LoginResult loginResult) {
 
-
+                editor.putInt("flag",flag+1);
+                editor.commit();
                 Intent ıntent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(ıntent);
-
             }
 
             @Override
@@ -57,8 +62,17 @@ public class GirisActivity extends AppCompatActivity {
             }
         });
 
+        result = temp.getInt("flag",0);
+        if( result!= 0 )
+        {
+            Intent ıntent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(ıntent);
+        }
+
 
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

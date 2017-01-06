@@ -36,5 +36,13 @@
 
     </com.facebook.login.widget.LoginButton>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtresult"
+        android:text="result"
+        android:layout_below="@+id/fb_login_bn"
+        android:textSize="30sp"/>
+
 
 </RelativeLayout>
